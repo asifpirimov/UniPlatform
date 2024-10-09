@@ -1,0 +1,644 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Centering the Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    flex-grow: 1; /* Make the container take up remaining space */
+}
+
+/* Header Styles */
+header {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between; /* Align elements to the left and right */
+    align-items: center;
+}
+
+/* Logout Button Styles */
+header .logout-btn {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1rem; /* Space from the right edge */
+}
+
+header .logout-btn:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    flex-grow: 1; /* Takes remaining space to push logout button to the right */
+    text-align: left; /* Align the title to the left */
+    
+}
+
+header nav {
+    margin-top: 1rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+.search-form {
+    display: flex;
+  }
+  .search-input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  .search-btn{
+    padding: 5px 10px;
+    font-size: 1rem;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  .logout-btn {
+    color: red;
+  }
+  nav a {
+    margin-left: 10px;
+  }
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Profile Page Styles */
+.profile-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Profile Info Styles */
+.profile-info {
+    margin-bottom: 2rem;
+    text-align: center; /* Center text */
+}
+
+.profile-info p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.profile-info p strong {
+    font-weight: bold;
+}
+
+.profile-info .profile-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Edit Button Styles */
+.edit-button {
+    background-color: lightblue; /* Light blue background */
+    color: white; /* White text */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block; /* Change to block for centering */
+    cursor: pointer;
+    margin: 1rem auto; /* Center with auto margins */
+    width: 100px; /* Fixed width */
+}
+
+.yp {
+    margin : 1rem auto;
+}
+.ep {
+    margin : 1rem auto;
+}
+
+/* Button Styles */
+.btn {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem auto; /* Center with auto margins */
+    width: 200px; /* Fixed width */
+    display: block; /* Block display for centering */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    width: 100px;
+}
+
+.btn:hover {
+    background-color: #333; /* Darker shade on hover */
+}
+
+
+.edit-button:hover {
+    background-color: #1e90ff; /* Darker shade of blue on hover */
+}
+
+/* Form Styles */
+.edit-profile-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center the form */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Label Styles */
+.edit-profile-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Input and Textarea Styles */
+.edit-profile-form input, 
+.edit-profile-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Save Button Styles */
+.save-button {
+    background-color: black;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width */
+}
+
+.save-button:hover {
+    background-color: #333; /* Darker shade on hover */
+}
+
+/* Utility Styles */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+/* Main container for search results */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px; /* Adding space between the cards */
+}
+
+/* Individual card for each user or search result */
+.card {
+    background-color: #ffffff; /* White background for a cleaner look */
+    border: 1px solid #e0e0e0; /* Softer border */
+    border-radius: 10px; /* Slightly larger corner rounding */
+    padding: 20px;
+    margin: 10px;
+    width: 220px; /* Increased width for better readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    transition: transform 0.2s ease-in-out; /* Animation for interactivity */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+}
+
+/* Profile image within the card */
+.profile-pic {
+    width: 100px; /* Slightly larger profile picture */
+    height: 100px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensure image fills the container */
+    margin-bottom: 15px; /* Increased spacing below the image */
+}
+
+/* Heading for the user or file */
+.card h2 {
+    font-size: 20px; /* Slightly larger text for names */
+    color: #333; /* Darker font for contrast */
+    margin: 10px 0;
+}
+
+/* Description or additional text */
+.card p {
+    color: #777; /* Lighter gray for supporting text */
+    font-size: 14px; /* More appropriate size for descriptions */
+    margin: 5px 0 15px 0;
+}
+
+/* Wrapper for multiple user cards */
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Increased spacing between cards */
+    justify-content: center; /* Align cards centrally */
+}
+
+/* Single user card */
+.user-card {
+    background-color: #f8f8f8; /* Subtle background for user cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 240px; /* Increased width for better content fit */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Light shadow */
+}
+
+/* Profile picture in the user card */
+.profile-picture {
+    width: 120px; /* Larger profile picture */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.user-card h3 {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+}
+
+.user-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+
+/* Download File Page */
+.download-container {
+    background-color: #f8f9fa; /* Light background for better contrast */
+    padding: 3rem; /* More padding for spacious feel */
+    border-radius: 12px; /* Slightly larger radius for softer edges */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    max-width: 650px; /* Slightly larger width */
+    margin: 3rem auto; /* More margin for better spacing */
+    text-align: center;
+    border: 1px solid #e9ecef; /* Light border for better definition */
+}
+
+.download-container h2 {
+    font-size: 2rem; /* Larger and bold heading */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #343a40; /* Darker text for emphasis */
+}
+
+.download-container p {
+    margin: 0.75rem 0; /* Increased margin for spacing */
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #6c757d; /* Softer text color for description */
+}
+
+.download-container .download-button {
+    background-color: #28a745; /* Keep the green background */
+    color: white;
+    padding: 1rem 2rem; /* Larger button for better interaction */
+    border-radius: 6px; /* Slightly larger radius */
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add smooth transition */
+}
+
+.download-container .download-button:hover {
+    background-color: #218838; /* Darker shade on hover */
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* File List Page */
+.file-list-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    max-width: 950px;
+    margin: 3rem auto;
+}
+
+.file-list-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.file-list-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-list-container ul li {
+    padding: 1.25rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between; /* Space items apart */
+    align-items: center; /* Align items vertically */
+}
+
+.file-list-container ul li:last-child {
+    border-bottom: none;
+}
+
+.file-list-container .file-actions {
+    display: flex;
+    justify-content: flex-end; /* Align actions to the right */
+    gap: 0.5rem; /* Spacing between action buttons */
+}
+
+.file-list-container .file-actions a {
+    background-color: #007bff; /* Blue background */
+    color: white;
+    padding: 0.5rem 1.5rem; /* More padding for better interaction */
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem; /* Slightly larger font */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.file-list-container .file-actions a:hover {
+    background-color: #0056b3;
+}
+
+.file-list-container .file-size {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Upload List Page */
+.upload-list-container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 950px;
+    margin: 3rem auto;
+}
+
+.upload-list-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #343a40;
+    font-weight: bold;
+}
+
+.upload-list-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.upload-list-container ul li {
+    padding: 1.25rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upload-list-container ul li:last-child {
+    border-bottom: none;
+}
+
+.upload-list-container .upload-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.upload-list-container .upload-actions a {
+    background-color: #ffc107; /* Yellow background */
+    color: black;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease;
+}
+
+.upload-list-container .upload-actions a:hover {
+    background-color: #e0a800;
+}
+
+.upload-list-container .upload-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Styling for the file search results list */
+#file-search-results-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual file search result item */
+.file-search-result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* File information styling */
+.file-info {
+    flex-grow: 1;
+}
+
+.file-name, .file-description, .file-tags {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.file-name {
+    font-weight: bold;
+}
+
+.file-tags {
+    font-style: italic;
+    color: #555;
+}
+
+/* Download button styling */
+.file-actions {
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.file-download-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.file-download-link:hover {
+    background-color: #218838;
+}
+
+/* Horizontal divider between results */
+.result-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 20px 0;
+}
+
+/* 'No files found' styling */
+#file-search-results-list li {
+    font-size: 1.1em;
+    color: #555;
+    padding: 20px;
+}
+
+
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .file-list-container ul li, .upload-list-container ul li {
+        padding: 0.75rem;
+    }
+    
+    .file-list-container .file-actions, .upload-list-container .upload-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-list-container .file-actions a, .upload-list-container .upload-actions a {
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header nav {
+        margin-top: 0.5rem;
+    }
+
+    header nav a {
+        margin: 0 0.5rem;
+    }
+
+    form, .profile-container {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> <!-- Linking the CSS styles -->
+    <title>Upload File</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+    <div class="upload-list-container"> <!-- Main container with styling class -->
+        <h2>Upload a File</h2> <!-- Apply the styled heading -->
+        
+        <form action="/files/upload" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="file">Choose file to upload:</label>
+                <input type="file" id="file" name="file" required>
+            </div>
+            
+            <div>
+                <label for="description">File Description:</label>
+                <textarea id="description" name="file_description" rows="3" cols="40" placeholder="Enter a description..." required></textarea>
+            </div>
+            
+            <div>
+                <label for="tags">Tags (comma-separated):</label>
+                <input type="text" id="tags" name="file_tags" placeholder="Enter tags...">
+            </div>
+            
+            <button type="submit" class="upload-actions">Upload</button> <!-- Apply action class -->
+        </form>
+        
+        <div class="upload-actions"> <!-- Action for viewing all files -->
+            <a href="/files">View all files</a>
+        </div>
+    </div>
+  <%- include('footer.ejs') %> <!-- Footer fixed -->
+
+  
+    <script>
+        document.getElementById("tags").addEventListener("input", function() {
+        this.value = this.value.toUpperCase();
+    });
+    </script>
+</body>
+</html>

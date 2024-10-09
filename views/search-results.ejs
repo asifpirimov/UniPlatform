@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> <!-- CSS for editing profile -->
+
+    <title>Search Results</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+
+    <div class="search-results-container">
+        <h1 id="search-results-title">Search Results</h1>
+
+        <!-- User Search Results -->
+        <h2>Users</h2>
+        <ul id="search-results-list">
+            <% if (users.length > 0) { %>
+                <% users.forEach(user => { %>
+                    <li class="search-result-item">
+                        <div class="user-info">
+                            <strong class="user-name">Name:</strong> <%= user.name %> <br>
+                            <strong class="user-surname">Surname:</strong> <%= user.surname %> <br>
+                            <strong class="user-email">Email:</strong> <%= user.email %> <br>
+                        </div>
+
+                        <!-- Assuming user has profile pictures -->
+                        <% if (user.profile_picture) { %>
+                            <div class="user-profile-picture">
+                                <img src="/<%= user.profile_picture %>" alt="Profile Picture" class="profile-pic" width="50" height="50">
+                            </div>
+                        <% } %>
+                    </li>
+                    <hr class="result-divider">
+                <% }) %>
+            <% } else { %>
+                <li>No users found.</li>
+            <% } %>
+        </ul>
+
+        <!-- File Search Results -->
+        <h2>Files</h2>
+        <ul id="file-search-results-list">
+            <% if (files.length > 0) { %>
+                <% files.forEach(file => { %>
+                    <li class="file-search-result-item">
+                        <div class="file-info">
+                            <strong class="file-name">Filename:</strong> <%= file.file_name %> <br>
+                            <strong class="file-description">Description:</strong> <%= file.description || 'No description available' %> <br>
+                            <strong class="file-tags">Tags:</strong> 
+                            <% if (file.tags && file.tags.length > 0) { %>
+                                <%= file.tags.join(', ') %>
+                            <% } else { %>
+                                No tags
+                            <% } %>
+                        </div>
+
+                        <!-- Assuming files may have download links or view options -->
+                        <div class="file-actions">
+                            <a href="/files/<%= file.id %>/download" class="file-download-link">Download</a>
+                        </div>
+                    </li>
+                    <hr class="result-divider">
+                <% }) %>
+            <% } else { %>
+                <li>No files found.</li>
+            <% } %>
+        </ul>
+
+        <div class="back-home">
+            <a href="/" class="back-home-link">Go back to home</a>
+        </div>
+    </div>
+    
+    <%- include('footer.ejs') %>
+
+</body>
+</html>

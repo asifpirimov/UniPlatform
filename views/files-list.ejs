@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> <!-- Linking the CSS styles -->
+    <title>Uploaded Files</title>
+</head>
+<body>
+    <%- include('header.ejs') %>
+
+    <div class="file-list-container"> <!-- Main container with styling class -->
+        <h2>Your Uploaded Files</h2> <!-- Apply the styled heading -->
+
+        <ul>
+            <% files.forEach(file => { %>
+                <li> <!-- Each file wrapped in a styled list item -->
+                    <div>
+                        <strong>File:</strong> <%= file.file_name %> <br>
+                        <strong>Description:</strong> <%= file.description || "No description" %> <br>
+                        <strong>Tags:</strong> <%= file.tags || "No tags" %> <br>
+                    </div>
+                    
+                    <!-- Action buttons (Download and Delete) -->
+                    <div class="file-actions">
+                        <a href="/files/download/<%= file.file_id %>">Download</a>
+
+                        <!-- Delete button with confirmation -->
+                        <form action="/files/delete/<%= file.file_id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this file?');">
+                            <button type="submit" class="delete-button">Delete</button>
+                        </form>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+
+        <!-- Link to upload another file -->
+        <div class="file-actions">
+            <a href="/files/upload">Upload another file</a>
+        </div>
+    </div>
+
+    <%- include('footer.ejs') %> <!-- Footer fixed -->
+
+</body>
+</html>

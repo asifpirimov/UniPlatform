@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Platform</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('header.ejs') %>
+  <div class="container">
+    <% if (!user) {%>
+      <h1>Welcome to University Platform</h1>
+      <b><p>You can login or register from top right.</p></b>
+    <% } else {%>
+      <h1>Welcome to ASOIU Platform, <%= user.name %> <%= user.surname %></h1>
+      <% } %>
+  </div>
+  <%- include('footer.ejs') %> <!-- Footer fixed -->
+</body>
+</html>

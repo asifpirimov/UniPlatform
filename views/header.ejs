@@ -1,0 +1,20 @@
+<header>
+  <h1>UNI Platform</h1>
+  <% if (user) { %>
+  <form action="/search" method="GET" class="search-form">
+    <input type="text" name="query" placeholder="Search..." class="search-input"/>
+    <button type="submit" class="search-btn">Search</button>
+  </form>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/profile">Profile</a>
+    <a href="/files/upload">Upload a File</a>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </nav>
+  <% } else { %>
+  <nav>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </nav>
+  <% } %>
+</header>

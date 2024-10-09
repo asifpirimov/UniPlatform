@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css"> <!-- CSS for editing profile -->
+    <title>Download File</title>
+</head>
+<body>
+  <%- include('header.ejs') %>
+
+    <div class="download-container"> <!-- Added the main container class -->
+        <h2>Download File: <%= file.file_name %></h2> <!-- Applied the styled heading -->
+        
+        <p>Description: <%= file.description %></p> <!-- Styled paragraph -->
+        <p>Size: <%= (file.file_size / 1024).toFixed(2) %> KB</p> <!-- Styled paragraph -->
+        
+        <!-- Button for download action -->
+        <a href="/files/download/<%= file.file_id %>" class="download-button">Click here to download</a>
+    </div>
+  <%- include('footer.ejs') %> <!-- Footer fixed -->
+
+</body>
+</html>

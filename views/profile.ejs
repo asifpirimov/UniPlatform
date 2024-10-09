@@ -1,0 +1,48 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- CSS for profile page -->
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+
+    <h1 class="yp">Your Profile</h1>
+
+    <div class="profile-info">
+      <p><strong>Name:</strong> <%= user.name %></p>
+      <p><strong>Surname:</strong> <%= user.surname %></p>
+      <p><strong>Email:</strong> <%= user.email %></p>
+      <p><strong>Bio:</strong> <%= user.bio %></p>
+      <% if (user.profile_picture) { %>
+        <img src="<%= user.profile_picture %>" alt="Profile Picture" width="150px" height="150px">
+      <% } else { %>
+        <p>No profile picture uploaded.</p>
+      <% } %>
+    </div>
+
+    <% if (user) { %>
+      <a href="/profile/edit" class="edit-button">Edit Profile</a>
+      <a href="/files" class="edit-button">Your Files</a>
+    <% } %>
+
+    <div class="follow-section">
+      <% if (currentUser && currentUser.id !== user.id) { %> <!-- Ensure the user can't follow themselves -->
+        <% if (isFollowing) { %>
+          <form action="/profile/unfollow/<%= user.id %>" method="POST">
+            <button type="submit" class="unfollow-button">Unfollow</button>
+          </form>
+        <% } else { %>
+          <form action="/profile/follow/<%= user.id %>" method="POST">
+            <button type="submit" class="follow-button">Follow</button>
+          </form>
+        <% } %>
+      <% } %>
+    </div>
+    
+
+    <%- include('footer.ejs') %>
+  </body>
+  </html>

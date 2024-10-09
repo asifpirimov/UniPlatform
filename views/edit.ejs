@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="/css/style.css"> <!-- CSS for editing profile -->
+</head>
+<body>
+  <%- include('header.ejs') %>
+
+  <h1 class="ep">Edit Profile</h1>
+
+  <!-- Form for updating name, surname, and bio -->
+  <form action="/profile/edit" method="POST" class="edit-profile-form">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= user.name %>">
+
+    <label for="surname">Surname:</label>
+    <input type="text" name="surname" id="surname" value="<%= user.surname %>">
+
+    <label for="bio">Bio:</label>
+    <textarea name="bio" id="bio" rows="4" cols="50"><%= user.bio %></textarea>
+
+    <button type="submit" class="save-button">Save Changes</button>
+  </form>
+
+  <!-- Separate form for uploading profile picture -->
+  <form action="/profile/edit/upload" method="POST" enctype="multipart/form-data" class="edit-profile-form">
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="file" name="profilePicture" accept="image/*">
+
+    <button type="submit" class="save-button">Upload Profile Picture</button>
+  </form>
+
+  <%- include('footer.ejs') %>
+</body>
+</html>
