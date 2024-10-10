@@ -17,7 +17,7 @@ This project is the **University Platform**, an online portal developed to suppo
 - **Authentication**: Microsoft OAuth integration for secure user authentication and authorization.
 - **Hosting**: Deployed on [your hosting provider] for a scalable and reliable experience.
 
--------FOR SCREENSHOOTS OF THE PROJECT----------
+## SCREENSHOOTS OF THE PROJECT
 
 ![image](https://github.com/user-attachments/assets/be13a811-ec75-40d4-97e2-d9267b312dbf)
 ![image](https://github.com/user-attachments/assets/65f06075-007c-46db-9357-36a2b97b0a46)
